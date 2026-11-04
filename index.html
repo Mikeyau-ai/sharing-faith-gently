@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Figtree:wght@400;500;600&display=swap">
 <style>
 /* Layout: a pocket study booklet. One reading column; each day is a chapter with its own numeral,
-   a sticky strip of day links on top, and the 90-minute session drawn to scale near the start. */
+   and a sticky strip of day links on top. */
 :root {
   --bg: #f5f7f4;          /* cool paper with a faint green cast */
   --surface: #ffffff;
@@ -92,23 +92,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .daynav .n { font-family: var(--font-display); color: var(--accent); font-weight: 600; font-size: var(--step--1); }
 .daynav .t { font-size: 0.8rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-/* Session shape, drawn to scale (90 minutes) */
-.shape { padding-block: 1.75rem 0.5rem; display: grid; gap: 0.9rem; }
-.shape h2 { font-size: var(--step-1); }
-.bar {
-  display: grid; grid-template-columns: 15fr 5fr 20fr 15fr 15fr 15fr 5fr; gap: 3px;
-  height: 14px; border-radius: 7px; overflow: hidden;
-}
-.bar span { background: var(--accent); }
-.bar span:nth-child(even) { background: var(--accent-soft); }
-.legend {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 0.35rem 1rem;
-  font-size: var(--step--1);
-}
-.legend li { display: flex; justify-content: space-between; gap: 0.5rem; border-bottom: 1px dotted var(--rule); padding-block: 0.2rem; }
-.legend b { font-weight: 500; }
-.legend span { color: var(--muted); font-variant-numeric: tabular-nums; }
 .note { font-size: var(--step--1); color: var(--muted); margin: 0; }
 
 /* Day chapters */
@@ -199,6 +182,7 @@ footer p { margin: 0; }
   <p class="eyebrow">Four sessions · 90 minutes each</p>
   <h1>Sharing Your Faith Gently</h1>
   <p class="lede">How to talk about Jesus with your kids and your colleagues: with gentleness, good questions, an honest story, and open hands.</p>
+  <p class="note">Between sessions, do the SOAP reading (Scripture, Observation, Application, Prayer); that is where the longer passages went. Go deeper is optional. Ticks and notes on this page are saved on your device only.</p>
 </header>
 
 <nav class="daynav" aria-label="Days">
@@ -211,21 +195,6 @@ footer p { margin: 0; }
 </nav>
 
 <main class="wrap">
-  <section class="shape" aria-labelledby="shape-h">
-    <h2 id="shape-h">How each session runs</h2>
-    <div class="bar" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-    <ul class="legend">
-      <li><b>Social</b><span>15 min</span></li>
-      <li><b>Welcome</b><span>5 min</span></li>
-      <li><b>Videos</b><span>20 min</span></li>
-      <li><b>Scripture</b><span>15 min</span></li>
-      <li><b>Discussion</b><span>15 min</span></li>
-      <li><b>Practice</b><span>15 min</span></li>
-      <li><b>Prayer</b><span>5 min</span></li>
-    </ul>
-    <p class="note">Start with the social block: a cuppa and a proper catch-up, inside the 90 minutes. Question groups sit in their block: Open with Welcome, After the videos with Videos, Into the text with Scripture, and Bring it home with Discussion. On Day 3 the clips run about 17 minutes, so keep that chat to one question. Between sessions, do the SOAP reading (Scripture, Observation, Application, Prayer); that is where the longer passages went. Go deeper is optional. Ticks and notes on this page are saved on your device only.</p>
-  </section>
-
   <!-- Day 1 -->
   <article class="day" id="day-1" aria-labelledby="d1-h">
     <div class="dayhead">
@@ -236,7 +205,7 @@ footer p { margin: 0; }
       </div>
     </div>
     <p class="bigidea">People ask about our hope when our lives make them curious, at home and at work. Our character comes before our arguments.</p>
-    <p class="note">Start with a cuppa and catch-up (15 min), then the blocks below.</p>
+    <p class="note">Start with a cuppa and catch-up, then the blocks below.</p>
 
     <section>
       <h3>Welcome</h3>
@@ -247,7 +216,7 @@ footer p { margin: 0; }
     </section>
 
     <section>
-      <h3>Watch · 12 minutes</h3>
+      <h3>Watch</h3>
       <ul class="videos">
         <li><a href="https://www.youtube.com/watch?v=WhP7AZQlzCg" target="_blank" rel="noopener"><span class="vt">Book of 1 Peter Summary</span><span class="vl">7:56</span><span class="vw">BibleProject</span><span class="vs">Peter writes to Christians treated as outsiders and shows how their conduct can bear witness to Jesus.</span></a></li>
         <li><a href="https://www.youtube.com/watch?v=4WYNBjJSYvE" target="_blank" rel="noopener"><span class="vt">Hope</span><span class="vl">4:34</span><span class="vw">BibleProject</span><span class="vs">Biblical hope rests on a person, not on circumstances. It is the "hope that you have" in 1 Peter 3:15.</span></a></li>
@@ -337,7 +306,7 @@ footer p { margin: 0; }
       </div>
     </div>
     <p class="bigidea">Jesus often answered with a question. Listening first shows people they matter and earns us the right to be heard.</p>
-    <p class="note">Start with a cuppa and catch-up (15 min), then the blocks below.</p>
+    <p class="note">Start with a cuppa and catch-up, then the blocks below.</p>
 
     <section>
       <h3>Welcome</h3>
@@ -348,7 +317,7 @@ footer p { margin: 0; }
     </section>
 
     <section>
-      <h3>Watch · 12 minutes</h3>
+      <h3>Watch</h3>
       <ul class="videos">
         <li><a href="https://www.youtube.com/watch?v=sLflucMmyLg" target="_blank" rel="noopener"><span class="vt">Everyday Evangelism: How to Start</span><span class="vl">7:43</span><span class="vw">Sam Chan</span><span class="vs">Ask a safe question like "Do you have a faith?", then listen to their story for as long as they will tell it.</span></a></li>
         <li><a href="https://www.youtube.com/watch?v=eF70xjPirHo" target="_blank" rel="noopener"><span class="vt">How to Defend Your Faith Like a Pro—Without Arguing!</span><span class="vl">4:07</span><span class="vw">Greg Koukl, Stand to Reason</span><span class="vs">The "Columbo tactic": well-chosen questions instead of preaching, even at work.</span></a></li>
@@ -443,7 +412,7 @@ footer p { margin: 0; }
       </div>
     </div>
     <p class="bigidea">People can argue with our theology, but not with what God has done in our lives. Tell it simply, and let it point to Jesus.</p>
-    <p class="note">Start with a cuppa and catch-up (15 min), then the blocks below.</p>
+    <p class="note">Start with a cuppa and catch-up, then the blocks below.</p>
 
     <section>
       <h3>Welcome</h3>
@@ -454,7 +423,7 @@ footer p { margin: 0; }
     </section>
 
     <section>
-      <h3>Watch · 17 minutes</h3>
+      <h3>Watch</h3>
       <ul class="videos">
         <li><a href="https://www.youtube.com/watch?v=qfXnVkpmsyI" target="_blank" rel="noopener"><span class="vt">Everyday Evangelism: How to Share Your Story</span><span class="vl">10:33</span><span class="vw">Sam Chan</span><span class="vs">Drop the jargon and shape your story in three parts: who you are and what you long for, the moment it turns out to be all about Jesus, and life with him now.</span></a></li>
         <li><a href="https://www.youtube.com/watch?v=a1FZknZyIiA" target="_blank" rel="noopener"><span class="vt">Why Is My Evangelism at Work So Lame?</span><span class="vl">5:58</span><span class="vw">John Piper, Desiring God</span><span class="vs">Invite a colleague to lunch and offer to trade life stories, and don't push if they decline.</span></a></li>
@@ -552,7 +521,7 @@ footer p { margin: 0; }
       </div>
     </div>
     <p class="bigidea">Our part is to plant and water faithfully, and God gives the growth. That frees us to love our kids and our colleagues with patience, not pressure.</p>
-    <p class="note">Start with a cuppa and catch-up (15 min), then the blocks below.</p>
+    <p class="note">Start with a cuppa and catch-up, then the blocks below.</p>
 
     <section>
       <h3>Welcome</h3>
@@ -563,7 +532,7 @@ footer p { margin: 0; }
     </section>
 
     <section>
-      <h3>Watch · 9 minutes</h3>
+      <h3>Watch</h3>
       <ul class="videos">
         <li><a href="https://www.youtube.com/watch?v=9oC3kPpdHu0" target="_blank" rel="noopener"><span class="vt">What Can a Parent Do When Their Grown Children Have Walked Away from Christianity?</span><span class="vl">4:22</span><span class="vw">Stand to Reason</span><span class="vs">Pray, ask questions and listen patiently. Each conversation doesn't need the whole gospel, and it may take years.</span></a></li>
         <li><a href="https://www.youtube.com/watch?v=1pa5r4QGM2k" target="_blank" rel="noopener"><span class="vt">God Gives the Growth: 1 Corinthians 3:6–8 Explained</span><span class="vl">4:07</span><span class="vw">Jim Murrell, The Passage Unlocked</span><span class="vs">Focus on your part, not the outcome: God rewards faithfulness, not results.</span></a></li>
