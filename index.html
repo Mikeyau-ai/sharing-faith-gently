@@ -96,7 +96,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .shape { padding-block: 1.75rem 0.5rem; display: grid; gap: 0.9rem; }
 .shape h2 { font-size: var(--step-1); }
 .bar {
-  display: grid; grid-template-columns: 10fr 15fr 25fr 20fr 15fr 5fr; gap: 3px;
+  display: grid; grid-template-columns: 15fr 5fr 20fr 15fr 15fr 15fr 5fr; gap: 3px;
   height: 14px; border-radius: 7px; overflow: hidden;
 }
 .bar span { background: var(--accent); }
@@ -125,6 +125,10 @@ section > h3, .block > h3 {
   font-family: var(--font-body); font-size: var(--step--1); letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--muted); font-weight: 600; margin-bottom: 0.6rem;
 }
+.day > section { display: grid; gap: 0.85rem; }
+.day > section > h3 { margin-bottom: 0; }
+.day > section > * { min-width: 0; }
+#story-hope { min-height: 3.2rem; }
 
 .videos { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
 .videos a {
@@ -156,7 +160,7 @@ section > h3, .block > h3 {
 .aside { font-size: var(--step--1); color: var(--muted); margin: 0; }
 
 .qgroup { display: grid; gap: 0.2rem; }
-.qgroup h4 { margin: 0.6rem 0 0; font-size: var(--step--1); font-weight: 600; color: var(--accent); }
+.qgroup h4 { margin: 0; font-size: var(--step--1); font-weight: 600; color: var(--accent); }
 .qgroup ol { margin: 0; padding-left: 1.6rem; display: grid; gap: 0.45rem; }
 .qgroup li::marker { font-variant-numeric: tabular-nums; color: var(--muted); }
 
@@ -182,6 +186,8 @@ textarea {
 .steps input { width: 1.15rem; height: 1.15rem; margin-top: 0.25rem; accent-color: var(--accent); }
 
 .pray { margin: 0; font-family: var(--font-display); font-style: italic; }
+.prayers { display: grid; gap: 0.45rem; }
+.prompts { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.25rem; }
 
 footer { padding-block: 2rem 3rem; color: var(--muted); font-size: var(--step--1); display: grid; gap: 0.5rem; }
 footer p { margin: 0; }
@@ -199,7 +205,7 @@ footer p { margin: 0; }
   <ol>
     <li><a href="#day-1"><span class="n">Day 1</span><span class="t">Gentleness</span></a></li>
     <li><a href="#day-2"><span class="n">Day 2</span><span class="t">Questions</span></a></li>
-    <li><a href="#day-3"><span class="n">Day 3</span><span class="t">Your story</span></a></li>
+    <li><a href="#day-3"><span class="n">Day 3</span><span class="t">Message</span></a></li>
     <li><a href="#day-4"><span class="n">Day 4</span><span class="t">Open hands</span></a></li>
   </ol>
 </nav>
@@ -207,16 +213,17 @@ footer p { margin: 0; }
 <main class="wrap">
   <section class="shape" aria-labelledby="shape-h">
     <h2 id="shape-h">How each session runs</h2>
-    <div class="bar" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="bar" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
     <ul class="legend">
-      <li><b>Welcome</b><span>10 min</span></li>
-      <li><b>Videos</b><span>15 min</span></li>
-      <li><b>Scripture</b><span>25 min</span></li>
-      <li><b>Discussion</b><span>20 min</span></li>
+      <li><b>Social</b><span>15 min</span></li>
+      <li><b>Welcome</b><span>5 min</span></li>
+      <li><b>Videos</b><span>20 min</span></li>
+      <li><b>Scripture</b><span>15 min</span></li>
+      <li><b>Discussion</b><span>15 min</span></li>
       <li><b>Practice</b><span>15 min</span></li>
       <li><b>Prayer</b><span>5 min</span></li>
     </ul>
-    <p class="note">Between sessions, read the day's passages with SOAP: Scripture, Observation, Application, Prayer. Ticks and notes on this page are saved on your device only.</p>
+    <p class="note">Start with the social block: a cuppa and a proper catch-up, inside the 90 minutes. Question groups sit in their block: Open with Welcome, After the videos with Videos, Into the text with Scripture, and Bring it home with Discussion. On Day 3 the clips run about 17 minutes, so keep that chat to one question. Between sessions, do the SOAP reading (Scripture, Observation, Application, Prayer); that is where the longer passages went. Go deeper is optional. Ticks and notes on this page are saved on your device only.</p>
   </section>
 
   <!-- Day 1 -->
@@ -229,6 +236,15 @@ footer p { margin: 0; }
       </div>
     </div>
     <p class="bigidea">People ask about our hope when our lives make them curious, at home and at work. Our character comes before our arguments.</p>
+    <p class="note">Start with a cuppa and catch-up (15 min), then the blocks below.</p>
+
+    <section>
+      <h3>Welcome</h3>
+      <div class="qgroup">
+        <h4>Open · Welcome</h4>
+        <ol start="1"><li>Think of someone whose faith made you curious before they said a word about it. What did you notice?</li></ol>
+      </div>
+    </section>
 
     <section>
       <h3>Watch · 12 minutes</h3>
@@ -236,59 +252,60 @@ footer p { margin: 0; }
         <li><a href="https://www.youtube.com/watch?v=WhP7AZQlzCg" target="_blank" rel="noopener"><span class="vt">Book of 1 Peter Summary</span><span class="vl">7:56</span><span class="vw">BibleProject</span><span class="vs">Peter writes to Christians treated as outsiders and shows how their conduct can bear witness to Jesus.</span></a></li>
         <li><a href="https://www.youtube.com/watch?v=4WYNBjJSYvE" target="_blank" rel="noopener"><span class="vt">Hope</span><span class="vl">4:34</span><span class="vw">BibleProject</span><span class="vs">Biblical hope rests on a person, not on circumstances. It is the "hope that you have" in 1 Peter 3:15.</span></a></li>
       </ul>
-    </section>
-
-    <section>
-      <h3>Read</h3>
-      <dl class="refs">
-        <div><dt>1 Peter 3:13–17</dt><dd>Readiness, gentleness, respect and a clear conscience, even when mistreated.</dd></div>
-        <div><dt>Colossians 4:5–6</dt><dd>Wisdom toward outsiders, and speech "seasoned with salt".</dd></div>
-        <div><dt>1 Peter 2:11–12</dt><dd>Living well among neighbours, so they see your good deeds.</dd></div>
-        <div><dt>Titus 2:9–10</dt><dd>Trustworthy work can make the teaching about God attractive.</dd></div>
-        <div><dt>Ephesians 6:4</dt><dd>Fathers, don't exasperate your children; train them in the Lord.</dd></div>
-        <div><dt>2 Timothy 2:24–25</dt><dd>Not quarrelsome, kind to everyone, gentle with those who oppose you.</dd></div>
-        <div><dt>Matthew 11:28–30</dt><dd>Jesus calls himself "gentle and humble in heart".</dd></div>
-      </dl>
-    </section>
-
-    <figure class="verse">
-      <p>"But in your hearts revere Christ as Lord. Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with gentleness and respect."</p>
-      <cite>Memory verse · 1 Peter 3:15 (NIV)</cite>
-    </figure>
-    <p class="aside">Word study: the Greek word for gentleness here, <i>prautēs</i>, means strength held under control, not weakness.</p>
-
-    <section>
-      <h3>Discuss</h3>
       <div class="qgroup">
-        <h4>Open</h4>
-        <ol start="1"><li>Think of someone whose faith made you curious before they said a word about it. What did you notice?</li></ol>
-        <h4>After the videos</h4>
+        <h4>After the videos · Videos</h4>
         <ol start="2">
           <li>Peter's readers were treated as outsiders. Where do you feel like an outsider for your faith, at work or at home?</li>
           <li>Biblical hope rests on a person, not circumstances. How would your family or workmates know you have that kind of hope?</li>
         </ol>
-        <h4>Into the text</h4>
+      </div>
+    </section>
+
+    <section>
+      <h3>Scripture</h3>
+      <dl class="refs">
+        <div><dt>1 Peter 3:13–17</dt><dd>Readiness, gentleness, respect and a clear conscience, even when mistreated.</dd></div>
+        <div><dt>Colossians 4:5–6</dt><dd>Wisdom toward outsiders, and speech "seasoned with salt".</dd></div>
+        <div><dt>Titus 2:9–10</dt><dd>Trustworthy work can make the teaching about God attractive.</dd></div>
+      </dl>
+      <p class="aside">Context: Titus 2:9–10 is written to slaves in a Roman household. Apply it carefully to employees. Trustworthy work can make the gospel attractive. It is not a licence to put up with abuse or injustice.</p>
+      <figure class="verse">
+        <p>"But in your hearts revere Christ as Lord. Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have. But do this with gentleness and respect."</p>
+        <cite>Memory verse · 1 Peter 3:15 (NIV)</cite>
+      </figure>
+      <p class="aside">Word study: the Greek word for gentleness here, <i>prautēs</i>, is often described as strength under control, not weakness.</p>
+      <div class="qgroup">
+        <h4>Into the text · Scripture</h4>
         <ol start="4">
           <li>In 1 Peter 3:15, what comes first: revering Christ, or giving an answer? Why might the order matter?</li>
-          <li>Who starts the conversation in verse 15? What does that suggest about our role?</li>
           <li>Titus 2:9–10 says the way we work can make the gospel attractive. What would that look like in your job, and what would make it unattractive?</li>
-          <li>Colossians 4:6 says our speech should be "seasoned with salt". What does salt do to food, and what would that look like in our words?</li>
-          <li>2 Timothy 2:24–25 names quarrelling, resentment and harshness. Which is the biggest temptation for you?</li>
         </ol>
-        <h4>Bring it home</h4>
-        <ol start="9">
-          <li>Ephesians 6:4 warns fathers not to exasperate their children. Have you ever won an argument with your son but pushed him away? What would gentleness have changed?</li>
-          <li>What hidden agendas can creep into our friendships with colleagues who don't believe? How can we tell when they have?</li>
-          <li>What makes you defensive when your son or a colleague questions your faith? What would "strength under control" look like then?</li>
-          <li>Which habit would most undercut your witness at work or at home: sarcasm, complaining, gossip, or a short temper?</li>
+      </div>
+    </section>
+
+    <section>
+      <h3>Discussion</h3>
+      <div class="qgroup">
+        <h4>Bring it home · Discussion</h4>
+        <ol start="6">
+          <li>Have you ever won an argument at home but pushed your kids away? What would gentleness have changed?</li>
+          <li>What makes you defensive when your kids question your faith, or a colleague does? What would strength under control look like then?</li>
         </ol>
       </div>
     </section>
 
     <div class="practice">
       <h3>Practice · gentle answers</h3>
-      <p>In pairs, one person plays a workmate or a son and raises a common criticism, such as "Christians are so judgmental" or "Church is boring and pointless." The other answers in under a minute, aiming for gentleness and respect rather than winning. Swap, then talk about what tone came through.</p>
+      <p>In pairs, one person plays a workmate or one of your kids and raises a common criticism, such as "Christians are so judgemental" or "Church is boring and pointless." The other answers in under a minute, aiming for gentleness and respect rather than winning. Swap, then talk about what tone came through.</p>
     </div>
+
+    <section>
+      <h3>Prayer</h3>
+      <div class="prayers">
+        <p class="pray">Thank God for someone whose gentle life drew you towards Jesus.</p>
+        <p class="pray">Ask for a gentle spirit the next time faith comes up at home or at work.</p>
+      </div>
+    </section>
 
     <section class="block">
       <h3>Before Day 2</h3>
@@ -297,7 +314,17 @@ footer p { margin: 0; }
         <li><label><input type="checkbox" id="d1-s2"><span>Read 1 Peter 3:8–17 using SOAP.</span></label></li>
       </ul>
     </section>
-    <p class="pray">Pray for a gentle spirit, and for your hope to be visible to your family and workmates.</p>
+
+    <section>
+      <h3>Go deeper</h3>
+      <p class="aside">Optional, between sessions.</p>
+      <dl class="refs">
+        <div><dt>1 Peter 2:11–12</dt><dd>Living well among neighbours, so they see your good deeds.</dd></div>
+        <div><dt>Ephesians 6:4</dt><dd>Fathers, don't exasperate your children; train them in the Lord.</dd></div>
+        <div><dt>2 Timothy 2:24–25</dt><dd>Not quarrelsome, kind to everyone, gentle with those who oppose you.</dd></div>
+        <div><dt>Matthew 11:28–30</dt><dd>Jesus calls himself "gentle and humble in heart".</dd></div>
+      </dl>
+    </section>
   </article>
 
   <!-- Day 2 -->
@@ -310,6 +337,15 @@ footer p { margin: 0; }
       </div>
     </div>
     <p class="bigidea">Jesus often answered with a question. Listening first shows people they matter and earns us the right to be heard.</p>
+    <p class="note">Start with a cuppa and catch-up (15 min), then the blocks below.</p>
+
+    <section>
+      <h3>Welcome</h3>
+      <div class="qgroup">
+        <h4>Open · Welcome</h4>
+        <ol start="1"><li>Who in your life is a great listener? What do they do that makes you feel heard?</li></ol>
+      </div>
+    </section>
 
     <section>
       <h3>Watch · 12 minutes</h3>
@@ -317,58 +353,67 @@ footer p { margin: 0; }
         <li><a href="https://www.youtube.com/watch?v=sLflucMmyLg" target="_blank" rel="noopener"><span class="vt">Everyday Evangelism: How to Start</span><span class="vl">7:43</span><span class="vw">Sam Chan</span><span class="vs">Ask a safe question like "Do you have a faith?", then listen to their story for as long as they will tell it.</span></a></li>
         <li><a href="https://www.youtube.com/watch?v=eF70xjPirHo" target="_blank" rel="noopener"><span class="vt">How to Defend Your Faith Like a Pro—Without Arguing!</span><span class="vl">4:07</span><span class="vw">Greg Koukl, Stand to Reason</span><span class="vs">The "Columbo tactic": well-chosen questions instead of preaching, even at work.</span></a></li>
       </ul>
-    </section>
-
-    <section>
-      <h3>Read</h3>
-      <dl class="refs">
-        <div><dt>John 4:4–26</dt><dd>Jesus opens with a request and follows her questions rather than giving a speech.</dd></div>
-        <div><dt>Luke 10:25–37</dt><dd>Jesus answers a test with questions and ends by asking who was the neighbour.</dd></div>
-        <div><dt>Mark 10:46–52</dt><dd>"What do you want me to do for you?"</dd></div>
-        <div><dt>Luke 2:46–47</dt><dd>The twelve-year-old Jesus listening to the teachers and asking questions.</dd></div>
-        <div><dt>James 1:19</dt><dd>Quick to listen, slow to speak, slow to become angry.</dd></div>
-        <div><dt>Proverbs 18:13</dt><dd>Answering before listening is folly.</dd></div>
-      </dl>
-    </section>
-
-    <figure class="verse">
-      <p>"The purposes of a person's heart are deep waters, but one who has insight draws them out."</p>
-      <cite>Memory verse · Proverbs 20:5 (NIV)</cite>
-    </figure>
-
-    <section>
-      <h3>Discuss</h3>
       <div class="qgroup">
-        <h4>Open</h4>
-        <ol start="1"><li>Who in your life is a great listener? What do they do that makes you feel heard?</li></ol>
-        <h4>After the videos</h4>
+        <h4>After the videos · Videos</h4>
         <ol start="2">
           <li>Sam Chan suggests asking "Do you have a faith?" and then listening for as long as they will talk. What would make that question feel safe rather than awkward?</li>
           <li>Koukl suggests using questions where you can't openly talk about faith, like many workplaces. What would a genuine question sound like there, rather than a trap?</li>
         </ol>
-        <h4>Into the text</h4>
+      </div>
+    </section>
+
+    <section>
+      <h3>Scripture</h3>
+      <dl class="refs">
+        <div><dt>Luke 10:25–37</dt><dd>Jesus answers a test with questions and ends by asking who was the neighbour.</dd></div>
+        <div><dt>Mark 10:46–52</dt><dd>"What do you want me to do for you?"</dd></div>
+        <div><dt>James 1:19</dt><dd>Quick to listen, slow to speak, slow to become angry.</dd></div>
+      </dl>
+      <figure class="verse">
+        <p>"The purposes of a person's heart are deep waters, but one who has insight draws them out."</p>
+        <cite>Memory verse · Proverbs 20:5 (NIV)</cite>
+      </figure>
+      <div class="qgroup">
+        <h4>Into the text · Scripture</h4>
         <ol start="4">
-          <li>In John 4, count the questions. Who asks more, Jesus or the woman?</li>
-          <li>How does Jesus move from water to deeper things? What does he notice about her along the way?</li>
           <li>In Luke 10 the expert asks to test Jesus. How do Jesus's questions turn a debate into a personal challenge?</li>
-          <li>Jesus ends the parable with a question, not a conclusion (verse 36). Why let the man answer for himself?</li>
           <li>Why would Jesus ask a blind man what he wants (Mark 10:51)? What does a question give the other person?</li>
         </ol>
-        <h4>Bring it home</h4>
-        <ol start="9">
-          <li>What makes it hard to listen to your son, or a colleague, without jumping in to correct?</li>
-          <li>What would change if your goal in a conversation was to understand rather than to persuade?</li>
-          <li>Which questions open people up, and which shut them down? Give an example of each.</li>
-          <li>Have you ever asked your son, or a colleague you see every day, what they actually believe and why? What stops you?</li>
+      </div>
+    </section>
+
+    <section>
+      <h3>Discussion</h3>
+      <div class="qgroup">
+        <h4>Bring it home · Discussion</h4>
+        <ol start="6">
+          <li>What makes it hard to listen to your kids, or to a colleague, without jumping in to correct them?</li>
+          <li>What would change if your aim in a conversation was to understand, rather than to persuade?</li>
         </ol>
       </div>
     </section>
 
     <div class="practice">
       <h3>Practice · the question ladder</h3>
-      <p>In pairs, one person plays a workmate, or a son home from uni, whose view differs. For three minutes the other may only ask questions: no opinions and no corrections. Climb the ladder: "What do you mean by that?", "How did you come to that view?", "What has that been like for you?" Swap, then talk about how it felt to be listened to.</p>
-      <p>Starter questions for the week:</p>
-      <ul>
+      <p>In pairs, one person plays a workmate, or one of your kids home from uni, whose view differs. For three minutes the other may only ask questions: no opinions and no corrections. Climb the ladder: "What do you mean by that?", "How did you come to that view?", "What has that been like for you?" Swap, then talk about how it felt to be listened to.</p>
+    </div>
+
+    <section>
+      <h3>Prayer</h3>
+      <div class="prayers">
+        <p class="pray">Ask God for real curiosity about your family and the people you work with.</p>
+        <p class="pray">Pray that you would listen longer than you speak in one conversation this week.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h3>Before Day 3</h3>
+      <ul class="steps">
+        <li><label><input type="checkbox" id="d2-s1"><span>At work or at home, ask at least two open-ended questions about someone's beliefs, values or experiences, without correcting them.</span></label></li>
+        <li><label><input type="checkbox" id="d2-s2"><span>Read John 4:1–42 using SOAP, and notice how the story ends. Jesus opens with a request and follows her questions rather than giving a speech.</span></label></li>
+      </ul>
+      <p class="aside">Questions you might ask during the week:</p>
+      <ul class="prompts">
         <li>Did you grow up with any faith or spirituality?</li>
         <li>What gives you hope when life gets hard?</li>
         <li>What makes work worth doing, beyond the pay?</li>
@@ -376,16 +421,16 @@ footer p { margin: 0; }
         <li>What's your impression of Christians, and where did it come from?</li>
         <li>If God were real, what would you want to ask him?</li>
       </ul>
-    </div>
-
-    <section class="block">
-      <h3>Before Day 3</h3>
-      <ul class="steps">
-        <li><label><input type="checkbox" id="d2-s1"><span>At work or at home, ask at least two open-ended questions about someone's beliefs, values or experiences, without correcting them.</span></label></li>
-        <li><label><input type="checkbox" id="d2-s2"><span>Read John 4:1–42 using SOAP, and notice how the story ends.</span></label></li>
-      </ul>
     </section>
-    <p class="pray">Pray for ears that listen well, and real curiosity about your family and the people you work with.</p>
+
+    <section>
+      <h3>Go deeper</h3>
+      <p class="aside">Optional, between sessions.</p>
+      <dl class="refs">
+        <div><dt>Luke 2:46–47</dt><dd>The twelve-year-old Jesus listening to the teachers and asking questions.</dd></div>
+        <div><dt>Proverbs 18:13</dt><dd>Answering before listening is folly.</dd></div>
+      </dl>
+    </section>
   </article>
 
   <!-- Day 3 -->
@@ -393,11 +438,20 @@ footer p { margin: 0; }
     <div class="dayhead">
       <span class="numeral" aria-hidden="true">3</span>
       <div>
-        <p class="eyebrow">Your story</p>
+        <p class="eyebrow">The message</p>
         <h2 id="d3-h">Telling a Better Story</h2>
       </div>
     </div>
     <p class="bigidea">People can argue with our theology, but not with what God has done in our lives. Tell it simply, and let it point to Jesus.</p>
+    <p class="note">Start with a cuppa and catch-up (15 min), then the blocks below.</p>
+
+    <section>
+      <h3>Welcome</h3>
+      <div class="qgroup">
+        <h4>Open · Welcome</h4>
+        <ol start="1"><li>What's a story you love to tell, such as a trip, a rescue or a near miss? What makes it fun to tell?</li></ol>
+      </div>
+    </section>
 
     <section>
       <h3>Watch · 17 minutes</h3>
@@ -405,57 +459,52 @@ footer p { margin: 0; }
         <li><a href="https://www.youtube.com/watch?v=qfXnVkpmsyI" target="_blank" rel="noopener"><span class="vt">Everyday Evangelism: How to Share Your Story</span><span class="vl">10:33</span><span class="vw">Sam Chan</span><span class="vs">Drop the jargon and shape your story in three parts: who you are and what you long for, the moment it turns out to be all about Jesus, and life with him now.</span></a></li>
         <li><a href="https://www.youtube.com/watch?v=a1FZknZyIiA" target="_blank" rel="noopener"><span class="vt">Why Is My Evangelism at Work So Lame?</span><span class="vl">5:58</span><span class="vw">John Piper, Desiring God</span><span class="vs">Invite a colleague to lunch and offer to trade life stories, and don't push if they decline.</span></a></li>
       </ul>
-    </section>
-
-    <section>
-      <h3>Read</h3>
-      <dl class="refs">
-        <div><dt>John 9:1–34</dt><dd>The healed man grows bolder under questioning, yet admits what he doesn't know.</dd></div>
-        <div><dt>Acts 26:1–23</dt><dd>Paul's story: life before (4–11), meeting Jesus (12–18), life since (19–23).</dd></div>
-        <div><dt>Deuteronomy 6:20–25</dt><dd>When a son asks why, the father answers with the family's story.</dd></div>
-        <div><dt>Psalm 78:4–7</dt><dd>Telling the next generation what the Lord has done.</dd></div>
-        <div><dt>Mark 5:18–20</dt><dd>"Go home to your own people and tell them."</dd></div>
-        <div><dt>Exodus 18:8–11</dt><dd>Moses tells his father-in-law what the Lord has done.</dd></div>
-      </dl>
-    </section>
-
-    <figure class="verse">
-      <p>"One thing I do know. I was blind but now I see!"</p>
-      <cite>Memory verse · John 9:25 (NIV)</cite>
-    </figure>
-
-    <section>
-      <h3>Discuss</h3>
       <div class="qgroup">
-        <h4>Open</h4>
-        <ol start="1"><li>What's a story you love to tell, such as a trip, a rescue or a near miss? What makes it fun to tell?</li></ol>
-        <h4>After the videos</h4>
+        <h4>After the videos · Videos</h4>
         <ol start="2">
           <li>Sam Chan says "I grew up in a Christian family and decided for myself at 16" means little to most outsiders. Why? What would help that same story land?</li>
-          <li>Piper suggests inviting a colleague to lunch to trade stories. Who could you invite, and what would make it feel natural?</li>
         </ol>
-        <h4>Into the text</h4>
-        <ol start="4">
-          <li>In John 9, trace how the man describes Jesus (verses 11, 17, 33, then 38). What changes?</li>
-          <li>The man admits what he doesn't know (verse 25). Why is that honesty so persuasive?</li>
-          <li>In Deuteronomy 6:20–21 the son asks about rules, and the father answers with a story. Why a story rather than a lecture?</li>
-          <li>In Acts 26, mark Paul's before, encounter and after. Which part gets the most space, and why?</li>
-          <li>In Mark 5:19, why might Jesus send the man home instead of taking him along?</li>
+      </div>
+    </section>
+
+    <section>
+      <h3>Scripture</h3>
+      <dl class="refs">
+        <div><dt>John 9:24–34</dt><dd>Under questioning he admits what he doesn't know, and says the one thing he does.</dd></div>
+        <div><dt>Deuteronomy 6:20–25</dt><dd>When a son asks why, the father answers with the family's story.</dd></div>
+        <div><dt>Mark 5:18–20</dt><dd>"Go home to your own people and tell them."</dd></div>
+      </dl>
+      <figure class="verse">
+        <p>"One thing I do know. I was blind but now I see!"</p>
+        <cite>Memory verse · John 9:25 (NIV)</cite>
+      </figure>
+      <div class="qgroup">
+        <h4>Into the text · Scripture</h4>
+        <ol start="3">
+          <li>In John 9 the man admits what he doesn't know (verse 25). Why is that honesty so persuasive?</li>
+          <li>In Deuteronomy 6:20–21 the child asks about the rules, and his father answers with a story. Why a story rather than a lecture?</li>
         </ol>
-        <h4>Bring it home</h4>
-        <ol start="9">
+      </div>
+    </section>
+
+    <section>
+      <h3>Discussion</h3>
+      <div class="qgroup">
+        <h4>Bring it home · Discussion</h4>
+        <ol start="5">
           <li>What church words do you use without noticing ("saved", "fellowship", "quiet time")? How would you say each in plain words?</li>
-          <li>If you grew up in church, what is the "before" in your story? Think about what you were tempted to put your hope in.</li>
-          <li>What difference does Jesus make in your life this week? Would your son or your workmates say they've seen it?</li>
-          <li>How would your story change if you told it to your son, and then to a colleague? What stays the same?</li>
+          <li>What difference does Jesus make in your life this week? Would your kids or your workmates say they've seen it?</li>
         </ol>
       </div>
     </section>
 
     <div class="practice">
-      <h3>Practice · your two-minute story</h3>
-      <p>Take five minutes to jot notes below, then tell your story to a partner in two minutes or less. Pick a listener: a workmate over lunch, or your son. The listener offers one encouragement and flags any jargon.</p>
+      <h3>Practice · plain words, then your story</h3>
+      <p>Put the hope of the gospel into two plain sentences that answer "What do Christians actually believe?" One sentence for what Jesus has done, one for what it means for us. Everyday words only. If you stall: Jesus died and rose to bring us back to God, and life with him starts now and doesn't end.</p>
+      <p>Jot the sentences and the three boxes, briefly. With a partner, take two minutes each: the sentences, then your story, as if to a workmate or to one of your kids. One encouragement, flag any jargon, then swap.</p>
       <div class="story">
+        <label for="story-hope">The hope <span>Two plain sentences. What do Christians actually believe?</span>
+          <textarea id="story-hope" rows="2"></textarea></label>
         <label for="story-before">Before <span>What was my life about, and what was I looking for?</span>
           <textarea id="story-before" rows="3"></textarea></label>
         <label for="story-encounter">Encounter <span>How did I meet Jesus, or when did faith become real?</span>
@@ -465,15 +514,32 @@ footer p { margin: 0; }
       </div>
     </div>
 
+    <section>
+      <h3>Prayer</h3>
+      <div class="prayers">
+        <p class="pray">Thank God for something specific he has done in your life.</p>
+        <p class="pray">Ask for plain words when you tell that story, and for a natural opening with your family or a workmate.</p>
+      </div>
+    </section>
+
     <section class="block">
       <h3>Before Day 4</h3>
       <ul class="steps">
         <li><label><input type="checkbox" id="d3-s1"><span>Finish your two-minute story and tell it to a Christian friend for practice.</span></label></li>
         <li><label><input type="checkbox" id="d3-s2"><span>Pray about one colleague or friend you could invite to lunch to trade stories.</span></label></li>
-        <li><label><input type="checkbox" id="d3-s3"><span>Read John 9 using SOAP.</span></label></li>
+        <li><label><input type="checkbox" id="d3-s3"><span>Read John 9:1–34 using SOAP. The healed man grows bolder under questioning, yet admits what he doesn't know.</span></label></li>
       </ul>
     </section>
-    <p class="pray">Thank God for specific things he has done in your life, and ask for a natural opening with your son or a workmate.</p>
+
+    <section>
+      <h3>Go deeper</h3>
+      <p class="aside">Optional, between sessions.</p>
+      <dl class="refs">
+        <div><dt>Acts 26:1–23</dt><dd>Paul's story: life before (4–11), meeting Jesus (12–18), life since (19–23).</dd></div>
+        <div><dt>Psalm 78:4–7</dt><dd>Telling the next generation what the Lord has done.</dd></div>
+        <div><dt>Exodus 18:8–11</dt><dd>Moses tells his father-in-law what the Lord has done.</dd></div>
+      </dl>
+    </section>
   </article>
 
   <!-- Day 4 -->
@@ -485,7 +551,16 @@ footer p { margin: 0; }
         <h2 id="d4-h">Living with Open Hands</h2>
       </div>
     </div>
-    <p class="bigidea">Our part is to plant and water faithfully, and God gives the growth. That frees us to love our sons and colleagues with patience, not pressure.</p>
+    <p class="bigidea">Our part is to plant and water faithfully, and God gives the growth. That frees us to love our kids and our colleagues with patience, not pressure.</p>
+    <p class="note">Start with a cuppa and catch-up (15 min), then the blocks below.</p>
+
+    <section>
+      <h3>Welcome</h3>
+      <div class="qgroup">
+        <h4>Open · Welcome</h4>
+        <ol start="1"><li>Who was patient with you while you were working out faith or life? What did they do?</li></ol>
+      </div>
+    </section>
 
     <section>
       <h3>Watch · 9 minutes</h3>
@@ -493,66 +568,78 @@ footer p { margin: 0; }
         <li><a href="https://www.youtube.com/watch?v=9oC3kPpdHu0" target="_blank" rel="noopener"><span class="vt">What Can a Parent Do When Their Grown Children Have Walked Away from Christianity?</span><span class="vl">4:22</span><span class="vw">Stand to Reason</span><span class="vs">Pray, ask questions and listen patiently. Each conversation doesn't need the whole gospel, and it may take years.</span></a></li>
         <li><a href="https://www.youtube.com/watch?v=1pa5r4QGM2k" target="_blank" rel="noopener"><span class="vt">God Gives the Growth: 1 Corinthians 3:6–8 Explained</span><span class="vl">4:07</span><span class="vw">Jim Murrell, The Passage Unlocked</span><span class="vs">Focus on your part, not the outcome: God rewards faithfulness, not results.</span></a></li>
       </ul>
+      <div class="qgroup">
+        <h4>After the videos · Videos</h4>
+        <ol start="2">
+          <li>The first video says each conversation doesn't need to cover the whole gospel. How would that change the way you talk with your kids?</li>
+          <li>The second video says God rewards faithfulness, not results. Does that relieve you or unsettle you? Why?</li>
+        </ol>
+      </div>
     </section>
 
     <section>
-      <h3>Read</h3>
+      <h3>Scripture</h3>
       <dl class="refs">
         <div><dt>1 Corinthians 3:5–9</dt><dd>Paul planted, Apollos watered, God gave the growth.</dd></div>
         <div><dt>Luke 15:11–24</dt><dd>The father lets his son go, keeps watching, and runs to meet him.</dd></div>
-        <div><dt>Luke 10:1–12</dt><dd>The 72 offer peace and leave the response with God.</dd></div>
         <div><dt>Mark 4:26–29</dt><dd>The seed grows, "though he does not know how".</dd></div>
-        <div><dt>Colossians 3:23–24</dt><dd>Work with all your heart, as working for the Lord.</dd></div>
-        <div><dt>Isaiah 55:10–11</dt><dd>God's word does not return to him empty.</dd></div>
       </dl>
-    </section>
-
-    <figure class="verse">
-      <p>"I planted the seed, Apollos watered it, but God has been making it grow. So neither the one who plants nor the one who waters is anything, but only God, who makes things grow."</p>
-      <cite>Memory verse · 1 Corinthians 3:6–7 (NIV)</cite>
-    </figure>
-
-    <section>
-      <h3>Discuss</h3>
+      <figure class="verse">
+        <p>"I planted the seed, Apollos watered it, but God has been making it grow. So neither the one who plants nor the one who waters is anything, but only God, who makes things grow."</p>
+        <cite>Memory verse · 1 Corinthians 3:6–7 (NIV)</cite>
+      </figure>
       <div class="qgroup">
-        <h4>Open</h4>
-        <ol start="1"><li>Who was patient with you while you were working out faith or life? What did they do?</li></ol>
-        <h4>After the videos</h4>
-        <ol start="2">
-          <li>The first video says each conversation doesn't need to cover the whole gospel. How would that change the way you talk with your son?</li>
-          <li>The second video says God rewards faithfulness, not results. Does that relieve you or unsettle you? Why?</li>
-        </ol>
-        <h4>Into the text</h4>
+        <h4>Into the text · Scripture</h4>
         <ol start="4">
           <li>In 1 Corinthians 3:5, what does Paul call himself and Apollos? What does that say about how we should see ourselves?</li>
           <li>In Luke 15:20, what is the father doing while his son is away? What does he do when the son returns, and what does he not do?</li>
-          <li>In Luke 10:1–12, what are the 72 responsible for, and what are they not responsible for?</li>
-          <li>In Mark 4:26–29, what does the farmer do, and what can't he explain? How should that shape our expectations?</li>
-          <li>How could ordinary work, done "as working for the Lord" (Colossians 3:23), be part of planting and watering among colleagues?</li>
         </ol>
-        <h4>Bring it home</h4>
-        <ol start="9">
-          <li>Where do you feel pressure to "close the deal", with your son or at work? Where does that pressure come from?</li>
-          <li>If your son, or someone else you love, never responds to Jesus, how would you keep loving them with no strings attached?</li>
-          <li>What practical help could you offer a colleague this month, with no expectation attached?</li>
-          <li>Looking back over the four days, which shift has mattered most to you?</li>
+      </div>
+    </section>
+
+    <section>
+      <h3>Discussion</h3>
+      <div class="qgroup">
+        <h4>Bring it home · Discussion</h4>
+        <ol start="6">
+          <li>Where do you feel pressure to "close the deal", with your kids or at work? Where does that pressure come from?</li>
+          <li>If your kids, or someone else you love, never respond to Jesus, how will you keep loving them with no strings attached?</li>
         </ol>
       </div>
     </section>
 
     <div class="practice">
       <h3>Practice · one person, one act</h3>
-      <p>Write down one person: your son, another family member or a colleague. Plan one practical way to serve them or spend time with them in the next two weeks, such as a meal, a job done together or help with a problem at work, with no expectation attached. Then, in threes, share your plan and pray for each person.</p>
+      <p>Write down one person: one of your kids, someone else in your family, or a colleague. Plan one practical way to serve them or spend time with them in the next two weeks, such as a meal, a job done together, or help with a problem at work, with no expectation attached. In threes, name the person and the plan. Keep it short; you will pray next.</p>
     </div>
+
+    <section>
+      <h3>Prayer</h3>
+      <p class="bigidea">Gentleness, good questions, a plain story, and open hands: that is this course. Keep going with one person, and leave the growth with God.</p>
+      <div class="prayers">
+        <p class="pray">Thank God that the growth is his work.</p>
+        <p class="pray">Pray by name for the person you chose, and ask to be patient and generous with them.</p>
+      </div>
+    </section>
 
     <section class="block">
       <h3>Going forward</h3>
       <ul class="steps">
         <li><label><input type="checkbox" id="d4-s1"><span>Pray daily for your one person.</span></label></li>
         <li><label><input type="checkbox" id="d4-s2"><span>Carry out your act of service, with no strings attached.</span></label></li>
+        <li><label><input type="checkbox" id="d4-s3"><span>Read Luke 15:11–32 using SOAP, including the older son.</span></label></li>
       </ul>
     </section>
-    <p class="pray">Thank God that the growth is his work, and ask him to make you faithful, patient and generous with your family and workmates.</p>
+
+    <section>
+      <h3>Go deeper</h3>
+      <p class="aside">Optional, between sessions.</p>
+      <dl class="refs">
+        <div><dt>Luke 10:1–12</dt><dd>The 72 offer peace and leave the response with God.</dd></div>
+        <div><dt>Colossians 3:23–24</dt><dd>Work with all your heart, as working for the Lord.</dd></div>
+        <div><dt>Isaiah 55:10–11</dt><dd>God's word does not return to him empty.</dd></div>
+      </dl>
+    </section>
   </article>
 </main>
 
