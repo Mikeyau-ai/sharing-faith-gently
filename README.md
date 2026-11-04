@@ -1,3 +1,3 @@
-# Sharing Your Faith Gently
+# Strength Under Control
 
 Follow-along guide for a four-session group study (one self-contained page, `index.html`), served by GitHub Pages.
